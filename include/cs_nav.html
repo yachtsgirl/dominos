@@ -1,0 +1,21 @@
+<div class="cs_nav">
+  <ul>
+    <li class="on"><a href="/domino/sub_page/notice.html?notice_num=1" class="notice">Notice</a></li>
+    <li><a href="/domino/sub_page/notice.html?notice_num=2" class="event">Event</a></li>
+    <li><a href="#" class="discount">Discount</a></li>
+    <li><a href="#" class="faq">FAQ</a></li>
+    <li><a href="#" class="company">Company</a></li>
+  </ul>
+  <? if($notice_num=="1"){ ?>
+  <script>
+    $('.cs_wrapper .cs_nav ul li').removeClass('on');
+    $('.cs_wrapper .cs_nav ul li:nth-child(1)').addClass('on');
+  </script>
+  <? }else if($notice_num=="2"){
+  ?>
+  <script>
+    $('.cs_nav ul li').removeClass('on');
+    $('.cs_nav ul li:nth-child(2)').addClass('on');
+  </script>
+  <? } ?>
+</div>

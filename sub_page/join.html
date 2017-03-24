@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="../css/login.css" media="all" />
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.4.1.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><!-- bxSlider Javascript file -->
+<script src="../js/common.js" charset="utf-8"></script>
+<script src="../js/login.js" charset="utf-8"></script>
+<title>Document</title>
+<style>
+
+</style>
+</head>
+<body>
+	<div class="skip_nav">
+		<a href="#content_area">본문 바로가기</a>
+		<a href="#gnb">네비게이션 바로가기</a>
+	</div>
+	<div id="wrap">
+		<!-- header -->
+		<? include "../include/index_head.html" ?>
+		<!-- header end-->
+		<div class="content">
+			<h1>Sign up</h1>
+			<h2 id="content_area" class="hidden">본문 컨텐츠 영역</h2>
+			<div class="loginPage_left join">
+				<p class="top_login">Create a new account.</p>
+				<form class="login join" method="post" name="join" action="../member/insert.php">
+					<fieldset>
+						<legend class="hidden">페이지 가입서 기입양식</legend>
+						<p><label for="username">Username *</label><span class="id_check">Please enter your username only using alphabet and number.</span></p>
+						<input id="username" type="text" name="username" class="textBox" required>
+						<p><label for="password">Password *</label><span class="pw_check">hi</span></p>
+						<input id="password" type="password" name="password" class="textBox" required>
+						<p><label for="confirm_password">Confirm password *</label><span class="pw_check_dup"></span></p>
+						<input id="confirm_password" type="password" name="confirm_password" class="textBox" required>
+						<p class="nameBox"><label for="fname">First Name *</label></p>
+						<p class="nameBox"><label for="lname">Last Name *</label></p>
+						<input id="fname" type="text" name="fname" class="nameBox fnameBox" required>
+						<input id="lname" type="text" name="lname" class="nameBox" required>
+						<p><label for="email">Email *</label><span class="email_check"></span></p>
+						<input type="hidden" name="email_check_js" class="email_check_js" value="">
+						<input id="email" type="text" name="email" class="textBox" required>
+						<input type="button" class="login_button" name="login" value="Sign up">
+						<span>By signing up, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</span>
+					</fieldset>
+				</form>
+				<p class="login_bottom">Have an account?</p>
+				<span><a href="login.html">Log In</a></span>
+			</div><!-- join-->
+
+		</div><!--content -->
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
+</body>
+</html>

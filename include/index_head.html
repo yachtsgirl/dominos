@@ -1,0 +1,46 @@
+<div class="header">
+  <div>
+    <h1><a href="/domino/index.html">logo</a></h1>
+    <h2 id="gnb" class="hidden">글로벌 네비게이션 영역</h2>
+    <ul class="top_nav">
+      <li>
+        <a href="/domino/sub_page/menu.html">Menu</a>
+        <ul>
+          <li><a href="/domino/sub_page/menu.html?m=1" class="new">New</a></li>
+          <li><a href="/domino/sub_page/menu.html?m=2" class="premium">Premium</a></li>
+          <li><a href="/domino/sub_page/menu.html?m=3" class="classic">Classic</a></li>
+          <li><a href="/domino/sub_page/menu.html?m=4" class="sides">Sides</a></li>
+          <li><a href="/domino/sub_page/menu.html?m=5" class="drinks">Drinks</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/domino/sub_page/notice.html?notice_num=1">Customer Center</a>
+        <ul>
+          <li><a href="/domino/sub_page/notice.html?notice_num=1">Notice</a></li>
+          <li><a href="/domino/sub_page/notice.html?notice_num=2">Event</a></li>
+          <li><a href="#">Discount</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Company</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Find Store</a></li>
+    </ul>
+    <ul class="util">
+    <?
+    if(!$s_username){
+    echo ("
+      <li><a href='/domino/sub_page/login.html'>login</a></li>
+      <li><a href='/domino/sub_page/join.html'>join</a></li>
+      ");
+    }else{
+     echo ("
+      <li>$s_fname($s_level 등급)</li>
+      <li><a href='/domino/login/logout.php'>logout</a></li>
+      <li><a href='/domino/sub_page/join_modify.html'>mypage</a></li>
+     ");
+    }
+    ?>
+      <li><a href="/domino/sub_page/cart.html">cart<span></span></a></li>
+    </ul>
+  </div>
+</div><!-- header -->

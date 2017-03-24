@@ -1,0 +1,217 @@
+<?
+	session_start();
+	@extract($_GET);
+	@extract($_POST);
+	@extract($_SESSION);
+	if($notice_num=='1'){
+		$table = "notice";
+	}else if($notice_num=='2'){
+		$table = "event";
+	}
+
+?>
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../css/notice.css">
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><!-- bxSlider Javascript file -->
+<script src="../js/common.js" charset="utf-8"></script>
+<title>Document</title>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.notice_content table tbody tr td:nth-child(2)').addClass('title');
+		$('.cs_wrapper .cs_nav ul li').on('click', function(){
+			$(this).siblings().removeClass('on');
+			$(this).addClass('on');
+		});
+
+	})
+</script>
+<style>
+
+</style>
+</head>
+<?
+include "../include/dbconn.php";
+if(!$scale){$scale=10;}
+if($mode=="search"){
+	if(!$search){
+?>
+		<script>
+		window.alert('검색할 단어를 입력해 주세요!');
+		history.go(-1);
+		</script>
+<?
+		exit;
+	}
+	$sql = "select * from $table where $find like '%$search%' order by num desc";
+}else{
+	$sql = "select * from $table order by num desc";
+}
+$result = mysql_query($sql, $connect);
+$total_record = mysql_num_rows($result); // 전체 글 수
+
+// 전체 페이지 수($total_page) 계산
+if($total_record%$scale == 0)
+	$total_page = floor($total_record/$scale);
+else
+	$total_page = floor($total_record/$scale)+1;
+
+if(!$page){$page=1;};
+$start = ($page-1)*$scale;
+$number = $total_record-$start;
+?>
+
+<body>
+	<div class="skip_nav">
+		<a href="#content_area">본문 바로가기</a>
+		<a href="#gnb">네비게이션 바로가기</a>
+		<a href="#order_menu">주문화면 바로가기</a>
+	</div>
+	<div id="wrap">
+		<!-- header -->
+		<? include "../include/index_head.html" ?>
+		<!-- header end-->
+		<div class="cs_wrapper">
+			<!-- cs_nav -->
+			<? include "../include/cs_nav.html" ?>
+			<!-- cs_nav end-->
+
+			<? if($notice_num=="1"){ ?>
+			<h2>Notice</h2>
+			<? }else if($notice_num=="2"){
+			?>
+			<h2>Event</h2>
+			<? } ?>
+			<div class="notice_content">
+				<h2 id="content_area" class="hidden">본문 컨텐츠 영역</h2>
+				<table>
+					<?
+					if($notice_num=="1"){
+					?>
+					<caption class="hidden">공지사항</caption>
+					<? }else if($notice_num=="2"){
+					?>
+					<caption class="hidden">이벤트</caption>
+					<? } ?>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>등록일</th>
+							<th>조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?
+							for($i=$start; $i<$start+$scale&&$i<$total_record; $i++){
+							  mysql_data_seek($result, $i);
+							  $row = mysql_fetch_array($result);
+
+								$item_num = $row[num];
+								$item_id = $row[id];
+								$item_hit = $row[hit];
+								$item_date = $row[regist_day];
+								$item_date = substr($item_date, 0, 10);
+
+								$item_subject = str_replace(" ", "&nbsp;", $row[subject]);
+
+								if($notice_num=="2"){
+									$img_name = $row[file_copied_0];
+									if($img_name){
+										$img_name = "../notice/data/event/".$img_name;
+									}else{
+										$img_name = "../notice/data/event/default.jpg";
+									}
+								}
+						?>
+						<tr>
+							<td><?=$item_num?></td>
+							<?
+							if($notice_num=="1"){
+							?>
+							<td><a href="../notice/view.php?num=<?=$item_num?>&page=<?=$page?>&notice_num=<?$notice_num?>"><?= $item_subject ?></a></td>
+							<? }else if($notice_num=="2"){
+							?>
+							<td><a class="event" href="../notice/view_event.php?num=<?=$item_num?>&page=<?=$page?>&table=event&notice_num=2"><img src="<?=$img_name?>" alt=""><?= $item_subject ?></a></td>
+							<? } ?>
+							<td><?=$item_date?></td>
+							<td><?=$item_hit?></td>
+						</tr>
+						<?
+								$number--;
+							}
+						?>
+					</tbody>
+				</table>
+				<div class="pager">
+					<a href="#" class="prev">&lt;</a>
+					<?
+						for ($i=1; $i<=$total_page; $i++){
+							if($page==$i){
+					?>
+					<a href="#" class="on"><?=$i?></a>
+					<?
+							}else{
+					?>
+					<a href='../sub_page/notice.html?page=<?=$i?>&notice_num=<?=$notice_num?>'><?=$i?></a>
+					<?
+							}
+						}
+					?>
+					<a href="#" class="next">&gt;</a>
+				</div>
+				<!-- pager -->
+				<?
+					if($s_username=="admin"){
+						if($notice_num=="1"){
+				?>
+					<a href="../notice/write_form.php" class="write">글쓰기</a>
+				<?
+						}else if($notice_num=="2"){
+				?>
+					<a href="../notice/write_form_event.php" class="write">글쓰기</a>
+				<? }} ?>
+				<form class="search" name="board_form" method="post" action="notice.html?mode=search&notice_num=<?=$notice_num?>">
+					<div class="list_search">
+						<div class="list_search1">
+						  <select name="scale" onchange="location.href='notice.html?scale='+this.value+'&notice_num=<?=$notice_num?>'">
+	              <option value=''>보기</option>
+	              <option value='10'>10</option>
+	              <option value='15'>15</option>
+	              <option value='20'>20</option>
+	              <option value='30'>30</option>
+	            </select>
+							<img src="../img/search.png">
+						</div>
+						<div class="list_search2">
+							<select name="find">
+	              <option value='subject'>제목</option>
+	              <option value='content'>내용</option>
+							</select>
+						</div>
+						<div class="list_search3"><input type="text" name="search"></div>
+						<div class="list_search4"><input type="image" src="../img/search.png"></div>
+					</div>
+				</form>
+			</div>
+			<!-- notice -->
+		</div>
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
+</body>
+</html>

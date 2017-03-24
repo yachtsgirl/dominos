@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url('common.css');
+
+.content{width: 960px; margin: 0px auto; overflow: hidden; padding-bottom: 60px; }
+.content h1{border-bottom: 2px solid #eee; color: #999; padding: 10px 0px 20px; font-size: 26px; margin-bottom: 30px;}
+
+.loginPage_left{width:50%;float: left; padding: 20px; box-sizing: border-box;}
+.loginPage_left span > a{color: #e21836; opacity: 0.7;}
+.loginPage_left p{font-size: 16px; padding: 10px 0px;}
+.loginPage_left p.top_login{font-family:'NanumBarunGothicBold'; color: #555;}
+.loginPage_left form.login{border-bottom: 1px solid #ccc;padding-bottom: 15px; margin-bottom: 40px;}
+.loginPage_left form.login p{margin-top: 20px;}
+.loginPage_left form.login input.textBox{display: block; width: 100%; height: 40px; border-radius: 5px; box-sizing: border-box; border-style: none; border: 1px solid #ccc;}
+.loginPage_left form.login .login_extra{font-size: 14px; padding-top:20px}
+.loginPage_left form.login .login_extra .checkBox{height: 14px;width: 14px;margin-right: 7px;}
+.loginPage_left form.login .login_button{width: 100%; height: 40px; font-size: 16px; line-height: 40px; border-style: none; border-radius: 3px; background-color: #ddd; margin-top: 30px; color: #666;}
+.loginPage_left form.login .forget{ float: right;}
+.loginPage_left .login_bottom{float: left; padding-right: 8px; font-size: 14px;}
+.loginPage_left > span{float: left; display: block; padding: 10px 0; font-size: 14px;}
+
+
+.loginPage_right{position: relative; width: 50%; height: 440px; float: left; box-sizing: border-box;  background: url(../img/imgBanner.jpg) no-repeat; background-position: -29px -72px; }
+.loginPage_right div{width: 100%; height: 100%; background-color: rgba(255,255,255,.2)}
+.loginPage_right span{ position: absolute;left:50%; top: 50%; margin-top: -175px; margin-left: -175px; padding-top: 130px; line-height: 1.5; box-sizing:border-box; display: block; width: 350px; height: 350px; border-radius: 50%; background-color: rgba(0,0,0,0.4); color: #fff; font-size: 34px; text-align: center;}
+
+
+
+div.join{width: 80%;  height: auto; float: none; padding: 20px; padding-top: 0; overflow: hidden;}
+div.join form.join{width: 80%; margin-bottom: 20px;}
+div.join form.join p{margin-top: 15px;}
+div.join > span{float: left; display: block; padding: 10px 0; font-size: 14px;}
+div.join form.join span{display: block; font-size: 14px; margin-top: 10px;}
+div.join form.join input.nameBox{display: inline-block;width: 291px; height: 40px; border-radius: 5px; box-sizing: border-box; border-style: none; border: 1px solid #ccc;}
+div.join form.join p.nameBox{width: 50%;float:left;}
+div.join form.join input.fnameBox{width: 284px; margin-right: 2px;}
+
+div.join form.join p > span{display:inline;color:#e21836;opacity: 0.7; float: right;}

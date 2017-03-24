@@ -1,0 +1,350 @@
+<? session_start();
+@extract($_POST);
+@extract($_GET);
+@extract($_SESSION);
+
+if(!$m){$m=1;}
+?>
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="../css/menu.css" media="all" />
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><!-- bxSlider Javascript file -->
+<script src="../js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../js/jquery.bxslider.css" rel="stylesheet" />
+<script src="../js/common.js" charset="utf-8"></script>
+<script src="../js/main.js" charset="utf-8"></script>
+<title>Document</title>
+<style>
+
+</style>
+
+</head>
+<body>
+	<div class="skip_nav">
+		<a href="#content_area">본문 바로가기</a>
+		<a href="#gnb">글로벌 네비게이션 바로가기</a>
+		<a href="#menu">메뉴 네비게이션 바로가기</a>
+	</div>
+	<div id="wrap">
+		<!-- header -->
+		<? include "../include/index_head.html" ?>
+		<!-- header end-->
+		<div class="menu">
+			<div class="menu_top">
+				<ul class="img_wrapper">
+					<li class="<? if($m==1){ echo 'on';} ?>">
+						<img src="../img/main/img09.jpg" alt="NEW">
+						<h2>NEW</h2>
+					</li>
+					<li class="<? if($m==2){ echo 'on';} ?>"><img src="../img/main/img06.jpg" alt="PREMIUM"><h2>PREMIUM</h2></li>
+					<li class="<? if($m==3){ echo 'on';} ?>"><img src="../img/main/img02.jpg" alt="Classic"><h2>CLASSIC</h2></li>
+					<li class="<? if($m==4){ echo 'on';} ?>"><img src="../img/main/img01.jpg" alt="Sides"><h2>SIDES</h2></li>
+					<li class="<? if($m==5){ echo 'on';} ?>"><img src="../img/main/img03.jpg" alt="Drinks"><h2>DRINKS</h2></li>
+				</ul>
+				<!-- <div class="menuText">
+					<h2>NEW</h2>
+				</div> -->
+			</div>
+			<!-- menu_top -->
+			<div class="menu_nav">
+				<h2 id="menu" class="hidden">메뉴 네비게이션 영역</h2>
+				<ul>
+					<li class="<? if($m==1){ echo 'on';} ?>"><a href="#" class="new">New</a></li>
+					<li class="<? if($m==2){ echo 'on';} ?>"><a href="#" class="premium">Premium</a></li>
+					<li class="<? if($m==3){ echo 'on';} ?>"><a href="#" class="classic">Classic</a></li>
+					<li class="<? if($m==4){ echo 'on';} ?>"><a href="#" class="sides">Sides</a></li>
+					<li class="<? if($m==5){ echo 'on';} ?>"><a href="#" class="drinks">Drinks</a></li>
+				</ul>
+			</div>
+			<!-- menu_nav -->
+		</div><!--menu-->
+		<div class="menuList">
+			<h2 id="content_area" class="hidden">본문 컨텐츠 영역</h2>
+			<ul>
+				<li class="new <? if($m==1){ echo 'on';} ?>">
+					<a href="menuDetail.html">
+						<dl class="pizza">
+								<dt><img src="../img/main/RPZ133_A.jpg" alt="브레이즈드 포크 피자 이미지"></dt>
+								<dd>
+									<p class="pizzaName">브레이즈드 포크</p>
+									<p class="price">L 32,900 M 27,500</p>
+								</dd>
+						</dl>
+					</a>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD128_A.jpg" alt="슈림프볼 사이드메뉴 이미지"></dt>
+						<dd>
+							<p class="pizzaName">슈림프볼</p>
+							<p class="price">5,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD127_A.jpg" alt="떠먹는 치즈퐁듀 이미지"></dt>
+						<dd>
+							<p class="pizzaName">떠먹는 치즈퐁듀</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD126_A.jpg" alt="킹프론 리조또 이미지"></dt>
+						<dd>
+							<p class="pizzaName">킹프론 리조또</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+				</li>
+				<li class="premium <? if($m==2){ echo 'on';} ?>">
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ133_A.jpg" alt="브레이즈드 포크 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">브레이즈드 포크</p>
+							<p class="price">L 32,900 M 27,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ132_A.jpg" alt="와규 앤 비스테카 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">와규 앤 비스테카</p>
+							<p class="price">L 32,900 M 27,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ131_A.jpg" alt="킹프론 씨푸드 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">킹프론 씨푸드</p>
+							<p class="price">L 33,900 M 28,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ126_A.jpg" alt="직화 스테이크 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">직화 스테이크</p>
+							<p class="price">L 32,900 M 27,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ076_A.jpg" alt="치즈케이크샌드 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">치즈케이크샌드</p>
+							<p class="price">L 32,900 M 27,500</p>
+						</dd>
+					</dl>
+				</li>
+				<li class="classic <? if($m==3){ echo 'on';} ?>">
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ088_A.jpg" alt="리얼바베큐 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">리얼바베큐</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ011_A.jpg" alt="포테이토 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">포테이토</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ005_A.jpg" alt="슈퍼디럭스 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">슈퍼디럭스</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ001_A.jpg" alt="슈퍼슈프림 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">슈퍼슈프림</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ003G_A.jpg" alt="베이컨체더치즈 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">베이컨체더치즈</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ004_A.jpg" alt="불고기 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">불고기</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ007_A.jpg" alt="페페로니 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">페페로니</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RPZ010_A.jpg" alt="치즈 피자이미지"></dt>
+						<dd>
+							<p class="pizzaName">치즈</p>
+							<p class="price">L 27,900 M 22,500</p>
+						</dd>
+					</dl>
+				</li>
+				<li class="sides <? if($m==4){ echo 'on';} ?>">
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD114_A.jpg" alt="크리스피 오곡치킨 이미지"></dt>
+						<dd>
+							<p class="pizzaName">크리스피 오곡치킨 (6조각)</p>
+							<p class="price">7,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD067_A.jpg" alt="크리스피치킨텐더 이미지"></dt>
+						<dd>
+							<p class="pizzaName">크리스피치킨텐더(6조각)</p>
+							<p class="price">7,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD064_A.jpg" alt="갈릭&허브윙스 이미지"></dt>
+						<dd>
+							<p class="pizzaName">갈릭&허브윙스(8조각)</p>
+							<p class="price">7,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD118_A.jpg" alt="화이트 크림 스파게티 이미지"></dt>
+						<dd>
+							<p class="pizzaName">화이트 크림 스파게티</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD031_A.jpg" alt="치즈볼로네즈 스파게티 이미지"></dt>
+						<dd>
+							<p class="pizzaName">치즈볼로네즈 스파게티</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD120_A.jpg" alt="하프&하프 스파게티 이미지"></dt>
+						<dd>
+							<p class="pizzaName">하프&하프 스파게티</p>
+							<p class="price">9,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD117_A.jpg" alt="화이트 리조또 이미지"></dt>
+						<dd>
+							<p class="pizzaName">화이트 리조또</p>
+							<p class="price">9,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD128_A.jpg" alt="슈림프볼 이미지"></dt>
+						<dd>
+							<p class="pizzaName">슈림프볼</p>
+							<p class="price">5,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD123_A.jpg" alt="고구마 치즈스틱 이미지"></dt>
+						<dd>
+							<p class="pizzaName">고구마 치즈스틱</p>
+							<p class="price">3,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD126_A.jpg" alt="킹프론 리조또 이미지"></dt>
+						<dd>
+							<p class="pizzaName">킹프론 리조또</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD127_A.jpg" alt="떠먹는 치즈퐁듀 이미지"></dt>
+						<dd>
+							<p class="pizzaName">떠먹는 치즈퐁듀</p>
+							<p class="price">8,800</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD112_A.jpg" alt="프레시 코울슬로 이미지"></dt>
+						<dd>
+							<p class="pizzaName">프레시 코울슬로</p>
+							<p class="price">2,400</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD111_A.jpg" alt="프레시 콘샐러드 이미지"></dt>
+						<dd>
+							<p class="pizzaName">프레시 콘샐러드</p>
+							<p class="price">2,400</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD101_A.jpg" alt="우리피클 이미지"></dt>
+						<dd>
+							<p class="pizzaName">우리피클</p>
+							<p class="price">500</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD086_A.jpg" alt="스위트 칠리 소스 이미지"></dt>
+						<dd>
+							<p class="pizzaName">스위트 칠리 소스 15g</p>
+							<p class="price">300</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD088_A.jpg" alt="갈릭디핑소스 이미지"></dt>
+						<dd>
+							<p class="pizzaName">갈릭디핑소스 15g</p>
+							<p class="price">200</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RSD017_A.jpg" alt="핫소스 이미지"></dt>
+						<dd>
+							<p class="pizzaName">핫소스</p>
+							<p class="price">100</p>
+						</dd>
+					</dl>
+				</li>
+				<li class="drinks <? if($m==5){ echo 'on';} ?>">
+					<dl class="pizza">
+						<dt><img src="../img/main/RDK001_A.jpg" alt="코카콜라 이미지"></dt>
+						<dd>
+							<p class="pizzaName">코카콜라</p>
+							<p class="price">1.25L 1,800 500ml 1,200</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RDK003_A.jpg" alt="스프라이트 이미지"></dt>
+						<dd>
+							<p class="pizzaName">스프라이트</p>
+							<p class="price">1.5L 2,100 500ml 1,300</p>
+						</dd>
+					</dl>
+					<dl class="pizza">
+						<dt><img src="../img/main/RDK005_A.jpg" alt="코카콜라 제로 이미지"></dt>
+						<dd>
+							<p class="pizzaName">코카콜라 제로</p>
+							<p class="price">1.5L 2,100 500ml 1,300</p>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div><!--menuList-->
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
+</body>
+</html>

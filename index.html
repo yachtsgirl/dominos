@@ -1,0 +1,322 @@
+<? session_start();
+@extract($_POST);
+@extract($_GET);
+@extract($_SESSION);
+?>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta name="Subject" content="피자">
+<meta name="Title" content="도미노피자">
+<meta name="Keywords" content="피자,이탈리안,도미노,피자배달">
+<meta name="Description" content="도미노피자 온라인 샵">
+<link rel="shortcut icon" href="./img/main/favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"  integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/jquery-migrate-1.4.1.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="./js/jquery.bxslider.css" rel="stylesheet" />
+<script src="./js/common.js" charset="utf-8"></script>
+<script src="./js/main.js" charset="utf-8"></script>
+<script src="./js/mainpopup.js" charset="utf-8"></script>
+<title>도미노피자</title>
+<style>
+</style>
+</head>
+<body>
+<div class="skip_nav">
+	<a href="#content_area">본문 바로가기</a>
+	<a href="#gnb">네비게이션 바로가기</a>
+	<a href="#order_menu">주문화면 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<? include "./include/index_head.html" ?>
+	<!-- header end-->
+  <div class="host_event">
+		<div class="imgWrap">
+			<ul class="mainSlider">
+        <li><a href="#"><img src="./img/main/banner1.png" alt="배너 이미지1"></a></li>
+        <li><a href="#"><img src="./img/main/banner2.jpg" alt="배너 이미지2"></a></li>
+				<li><a href="#"><img src="./img/main/banner3.jpg" alt="배너 이미지3"></a></li>
+				<li><a href="#"><img src="./img/main/banner4.jpg" alt="배너 이미지4"></a></li>
+	    </ul>
+		</div>
+  </div>
+  <div class="nav">
+		<div class="nav_wrap">
+			<h2 id="order_menu" class="hidden">메뉴 주문 영역</h2>
+    	<div class="box">
+				<a href="#">
+	    		<p><span class="kor-n">배달 주문하기</span></p>
+					<div class="line"></div>
+					<p><span class="eng-n">Delivery order</span></p>
+				</a>
+    	</div>
+			<div class="box">
+				<a href="#">
+	    		<p><span class="kor-n">방문포장 주문하기</span></p>
+					<div class="line"></div>
+					<p><span class="eng-n">Pickup order</span></p>
+				</a>
+    	</div>
+			<div class="box">
+				<a href="#">
+	    		<p><span class="kor-n">선물하기</span></p>
+					<div class="line colored"></div>
+					<p><span class="eng-n">Gift order</span></p>
+				</a>
+    	</div>
+			<div class="box">
+				<a href="#">
+	    		<p><span class="kor-n">쿠폰 주문하기</span></p>
+					<div class="line"></div>
+					<p><span class="eng-n">Coupon order</span></p>
+				</a>
+    	</div>
+		</div>
+  </div><!-- nav -->
+  <div class="menu">
+		<h2 id="content_area" class="hidden">본문 컨텐츠 영역</h2>
+    <div class="best">
+      <h3>남녀노소 누구나 좋아하는</h3>
+      <h2>베스트셀러</h2>
+      <div class="quad">
+				<div class="modalPage">
+
+				</div>
+				<div class="imgSliderWrap">
+					<div class="imgslider">
+		        <dl>
+	            <dt><img src="img/main/6quesos.png" alt="콰트로 치즈 피자 이미지"></dt>
+	            <dd>
+	              <p>콰트로 치즈 피자</p>
+	              <span> L 20,900 M 14,500</span>
+								<p class="hidden">피자 도우와 치즈만으로 승부수를 걸었다.토마토소스와 모차렐라 치즈를 가득 넣은 피자. 기본기에 충실한 도미노피자를 느껴보자</p>
+	            </dd>
+		        </dl>
+		        <dl>
+	            <dt><img src="img/main/Pulled_Beef.png" alt="슈퍼슈프림 피자 이미지"></dt>
+	            <dd>
+	              <p>슈퍼슈프림 피자</p>
+	              <span> L : 24,900 M : 18,500</span>
+								<p class="hidden">신선한 야채와 다양한 고기류를 골고루 토핑하여 맛만큼 알록달록 색감도 살아있는 피자. 스위트콘과 파인애플을 넣어 달콤한 맛이 가미된 도미노 특유의 맛</p>
+	            </dd>
+		        </dl>
+		        <dl>
+	            <dt><img src="img/main/Pulled_Pork.png" alt="포테이토 피자 이미지"></dt>
+	            <dd>
+	              <p>포테이토 피자</p>
+	              <span>L : 24,900 M : 18,500</span>
+								<p class="hidden">고소한 감자, 베이컨, 버섯, 양파가 푸짐하게 어우러진 도미노피자의 인기메뉴.남녀노소 모두 좋아하는 담백한 웰빙피자.</p>
+	            </dd>
+		        </dl>
+		        <dl>
+		          <dt><img src="img/main/pecado_carnal.png" alt="베이컨체더치즈피자 이미지"></dt>
+		          <dd>
+		            <p>베이컨체더치즈</p>
+		            <span>L : 24,900 M : 18,500</span>
+								<p class="hidden">노오란 체더치즈의 고소함과 푸짐한 베이컨이 만들어내는 완벽한 콤비. 매니아층의 꾸준한 사랑을 받고 있는 도미노만의 메뉴.</p>
+		          </dd>
+		        </dl>
+						<dl>
+	            <dt><img src="img/main/extravaganzza.png" alt="슈퍼디럭스 피자이미지"></dt>
+	            <dd>
+	              <p>슈퍼디럭스</p>
+	              <span>L : 24,900  R : 18,500</span>
+								<p class="hidden">쇠고기, 페퍼로니, 햄, 버섯, 피망, 양파, 올리브 등 가장 많은 토핑이 들어가 풍부한 맛을 내는 피자.무난한 맛으로 누구에게나 사랑 받는 기본메뉴.</p>
+	            </dd>
+		        </dl>
+					</div><!-- imgSlider -->
+				</div><!--imgSliderWrap-->
+				<div class="arrow">
+					<div class="left">prev</div>
+					<div class="right">next</div>
+				</div>
+	    </div><!-- quad -->
+      <!-- <div class="bottom_banner">
+        <img src="img/main/bottomBanner01.jpg" alt="">
+      </div> -->
+    </div><!-- best -->
+    <div class="new">
+      <h3>누구보다 빠르게 맛볼 수 있는</h3>
+      <h2>신메뉴</h2>
+      <div class="tres">
+				<a href="/domino/sub_page/menuDetail.html">
+        	<dl>
+            <dt><img src="img/main/new01.jpg" alt="슈퍼디럭스 피자이미지"></dt>
+            <dd>
+              <p>슈퍼디럭스</p>
+							<p class="discription">
+								<span>L 24,900 M 18,500</span>
+								쇠고기, 페퍼로니, 햄, 버섯, 피망, 양파, 올리브 등 가장 많은 토핑이 들어가 풍부한 맛을 내는 피자.무난한 맛으로 누구에게나 사랑 받는 기본메뉴.</p>
+            </dd>
+					</dl>
+				</a>
+				<a href="/domino/sub_page/menuDetail.html">
+        	<dl>
+            <dt><img src="img/main/new02.jpg" alt="직화스테이크 피자이미지"></dt>
+            <dd>
+              <p>직화스테이크</p>
+							<p class="discription">
+								<span>L 32,900 M 27,500</span>
+								불에 직접 구워 불 맛 특유의 그윽한 향과 맛이 가득한 직화 스테이크와 탱글탱글한 통새우, 4가지 이탈리안 치즈의 역대급 콜라보!</p>
+            </dd>
+        	</dl>
+				</a>
+				<a href="/domino/sub_page/menuDetail.html">
+        	<dl>
+            <dt><img src="img/main/new03.jpg" alt="와규 앤 비스테까 피자이미지"></dt>
+            <dd>
+              <p>와규 앤 비스테까</p>
+							<p class="discription">
+								<span>L 32,900 M 27,500</span>
+								소고기를 얇게 저며 구워먹는 이탈리안 요리 ‘비스테카’와 호주산 ‘와규’ , 5가지 프리미엄 치즈가 어우러져 깊고 풍부한 맛</p>
+            </dd>
+					</dl>
+				</a>
+      </div><!-- tres -->
+      <!-- <div class="bottom_banner">
+        <img src="img/main/bottomBanner02.jpg" alt="">
+      </div> -->
+    </div><!-- new -->
+  </div><!-- menu -->
+	<? include "./include/func.php"; ?>
+	<div class="latest">
+	  <div class="notice1">
+			<h2>Latest Notice</h2>
+			<table class="notice_box">
+				<caption class="hidden">공지사항 최신 게시글</caption>
+				<colgroup>
+					<col>
+					<col>
+				</colgroup>
+				<tbody>
+				<?
+				include "./include/dbconn.php";
+				$loop=6;
+				$sql = "select * from notice order by num desc limit $loop";
+				$result = mysql_query($sql, $connect);
+
+				while ($row = mysql_fetch_array($result)){
+					$num = $row[num];
+					$len_subject = mb_substr($row[subject], 'utf-8');
+					$subject = $row[subject];
+
+					if($len_subject > $char_limit){
+						$subject = str_replace("&#039;","'",$subject);
+						$subject = mb_substr($subject, 0, $char_limit, 'utf-8');
+						$subject = $subject."...";
+					}
+
+					$regist_day = substr($row[regist_day], 0, 10);
+					?>
+					<tr>
+						<td class='col1'><a href='./notice/view.php?table=<?=$table?>&num=<?=$num?>&notice_num=1'><?=$subject?></a></td>
+						<td class='col2'><?=$regist_day?></td>
+					</tr>
+					<?
+					}
+					mysql_close();
+				?>
+				</tbody>
+			</table>
+			<a class="more" href="/domino/sub_page/notice.html?notice_num=1">더보기</a>
+		</div><!-- notice1 -->
+		<div class="event1">
+			<h2>Latest Event</h2>
+			<table class="event_box">
+				<caption class="hidden">이벤트 최신 게시글</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<tbody>
+			<?
+			include "./include/dbconn.php";
+			$loop=3;
+			$sql = "select * from event order by num desc limit $loop";
+			$result = mysql_query($sql, $connect);
+
+			while ($row = mysql_fetch_array($result)){
+				$num = $row[num];
+	      $len_subject = mb_substr($row[subject], 'utf-8');
+				$subject = $row[subject];
+
+				if ($len_subject > $char_limit){
+	        $subject = str_replace("&#039;","'",$subject);
+					$subject = mb_substr($subject, 0, $char_limit, 'utf-8');
+					$subject = $subject."...";
+				}
+
+				$regist_day = substr($row[regist_day], 5, 5);
+
+				$img_name = $row[file_copied_0];
+				if($img_name){
+					$img_name = "./notice/data/event/".$img_name;
+				}else{
+					$img_name = "./notice/data/event/default.jpg";
+				}
+				?>
+				<tr>
+					<td class='col1'>
+					  <a class='img_wrap' href='./notice/view_event.php?table=event&num=<?=$num?>'><img src='<?=$img_name?>' alt=''></a>
+					</td>
+					<td class='col2'>
+					  <a href='./notice/view_event.php?table=event&num=<?=$num?>'><?=$subject?></a>
+	        </td>
+	        <td class='col3'><?=$regist_day?></td>
+			</tr>
+				<?
+			}
+			mysql_close();
+			?>
+		</table>
+		<a class="more" href="/domino/sub_page/notice.html?notice_num=2">더보기</a>
+		</div><!-- event1 -->
+	</div><!-- latest -->
+	<!-- footer -->
+	<? include "./include/index_foot.html" ?>
+	<!-- footer end -->
+</div><!-- wrap -->
+
+<!-- popup -->
+<div id="showimage" style="z-index:999;position:absolute;width:322px;left:125px;top:135px;">
+  <script>
+    function closeWin(){
+       var chk = document.getElementById('Notice')
+       if(chk.checked){
+             setCookie("Notice", "done" , 1);
+        }
+    }
+   if(getCookie("Notice") == "done"){
+       hidebox();
+   }
+ </script>
+ <table>
+    <caption><span class="hidden">공지사항 : 저작권에 대한 공지</span></caption>
+    <tr>
+      <td>
+          <img src="img/pop.png" alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다." >
+      </td>
+    </tr>
+    <tr>
+       <td style="height:15px;cursor:hand;">
+				 <p style="font-size:12px;text-align:center;color:#333;">
+					 <input type="checkbox" name="Notice" id="Notice" value="" title="오늘은 이창을 열지 않음 선택상자">
+					 <label for="Notice">오늘은 이창을 열지 않음.</label><a style="cursor:pointer"  onclick="closeWin();hidebox();return false;"> [close] </a>
+			 	 </p>
+			 </td>
+    </tr>
+ </table>
+</div>
+</body>
+</html>

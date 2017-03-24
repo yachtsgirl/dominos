@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="../css/menu.css" media="all" />
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><!-- bxSlider Javascript file -->
+<script src="../js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../js/jquery.bxslider.css" rel="stylesheet" />
+<script src="..js/common.js" charset="utf-8"></script>
+<title>Document</title>
+<style>
+
+</style>
+</head>
+<body>
+	<div class="skip_nav">
+		<a href="#content_area">본문 바로가기</a>
+		<a href="#gnb">네비게이션 바로가기</a>
+	</div>
+	<div id="wrap">
+		<!-- header -->
+		<? include "../include/index_head.html" ?>
+		<!-- header end-->
+		<div class="menu">
+			<div class="menu_nav">
+				<ul>
+					<li><a href="menu.html?m=1" class="new">New</a></li>
+					<li><a href="menu.html?m=2" class="premium">Premium</a></li>
+					<li><a href="menu.html?m=3" class="classic">Classic</a></li>
+					<li><a href="menu.html?m=4" class="sides">Sides</a></li>
+					<li><a href="menu.html?m=5" class="drinks">Drinks</a></li>
+				</ul>
+			</div>
+		</div><!--menu-->
+		<div class="detail">
+			<h2 id="content_area" class="hidden">본문 컨텐츠 영역</h2>
+			<img src="../img/main/detail.jpg" alt="직화스테이크 피자 이미지">
+			<div class="explain">
+				<p>직화 스테이크와 통새우, 4가지 치즈의 역대급 콜라보</p>
+				<h2>직화 스테이크</h2>
+				<span>L : 32,900 M : 27,500</span>
+				<p>불에 직접 구워 불 맛 특유의 그윽한 향과 맛이 가득한 직화 스테이크와 탱글탱글한 통새우, 4가지 이탈리안 치즈의 역대급 콜라보 피자가 고소하고 쫄깃한 곡물도우로 확대</p>
+				<span>토핑</span>
+				<p>직화 스테이크, 케이준새우, 치즈 4종(프로볼로네, 보코치니, 파르메산 치즈, 모차렐라), 양송이, 베이컨칩, 적양파, 구운감자, 파슬리, 선드라이토마토, 토마토 소스, 갈릭올리브 소스</p>
+				<span>원산지</span>
+				<p>직화스테이크(쇠고기):호주산<br>베이컨(돼지고기):미국산,스페인산,아일랜드산<br>모차렐라 치즈:미국산<br>오리지널,나폴리 도우:미국산,캐나다산 / 씬도우:미국산</p>
+			</div>
+			<div class="itemAdd">
+				<form method="post">
+					<select name="dType">
+					  <option value="original" selected>오리지널</option>
+						<option value="grain">곡물도우</option>
+					  <option value="napoli">나폴리</option>
+					  <option value="thin">씬</option>
+					</select>
+					<select name="size">
+					  <option value="large" selected>Large</option>
+					  <option value="medium">Medium</option>
+					</select>
+					<span class="down"></span>
+					<span class="qty">1</span>
+					<span class="up"></span>
+					<input type="button" class="button" name="button" value="장바구니에 담기">
+				</form>
+				<script type="text/javascript">
+					$('.detail .itemAdd form span.down').click(function(){
+						if($(this).parents('form').children('.qty').text()=='1'){
+						}else if(parseInt($(this).parents('form').children('.qty').text())>1){
+							$(this).parents('form').children('.qty').text(parseInt($(this).parents('form').children('.qty').text())-1);
+						}
+					})
+					$('.detail .itemAdd form span.up').click(function(){
+						console.log(parseInt($(this).parents('form').children('.qty').text()));
+						$(this).parents('form').children('.qty').text(parseInt($(this).parents('form').children('.qty').text())+1);
+					})
+				</script>
+			</div>
+		</div>
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
+</body>
+</html>

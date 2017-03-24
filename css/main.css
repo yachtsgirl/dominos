@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url('common.css');
+
+
+.host_event,.nav{background-color:#eeeeee }
+
+/*host*/
+.host_event{width: 100%; position: relative; }
+.host_event .imgWrap{ min-width: 1280px; height: 475px; overflow: hidden;margin: auto; background: #f5f5f5;}
+.host_event li{position: absolute; left: 0; top: 0;}
+.host_event .imgWrap .bx-wrapper{margin: 0 auto; position: inherit;}
+.host_event .imgWrap .bx-wrapper .bx-viewport{left:0;}
+.host_event .imgWrap .bx-wrapper .bx-viewport img {width: 100%; min-width: 1280px; }
+.host_event .imgWrap .bx-wrapper .bx-controls .bx-pager{position: absolute; left: 50%; bottom:5%; width:100px; margin-left: -50px; z-index: 50;}
+.host_event .imgWrap .bx-wrapper .bx-pager.bx-default-pager a{background: #fff;}
+.host_event .imgWrap .bx-wrapper .bx-pager.bx-default-pager a.active{background: #006391;}
+.imgWrap:after {content: ''; position: absolute; top: 0;  left: 0;  width: 100%;  height: 100%;  background-image: url(../img/bg_cover.png);  background-repeat: no-repeat;  background-position: 50% 100%;  background-color: rgba(0,0,0,0.1);}
+.nav{width: 100%;}
+.nav_wrap{width: 1280px; margin:0px auto; height: 150px; padding:40px 10px 10px 10px}
+.nav .box{float: left; width: 300px; background: #fff; height: 135px; margin-right: 24px; padding: 25px 0px; box-sizing: border-box; border: 1px solid #eee;box-shadow: 2px 2px 10px #999;}
+.nav .box:last-child{margin-right: 0;}
+.nav .box .line{width: 200px; height: 3px; background: #006391; margin: 5px auto 0px; }
+.nav .box .line.colored{background: #e21836;}
+.nav .box p{height: 33px; width: 200px; overflow: hidden; position: relative; left:48.5px;}
+.nav .box span{position: relative; display: block; width:200px; margin: 10px auto; text-align: center;}
+.nav .box span.kor-n{font-size: 18px; font-weight: bold; height: 30px;}
+
+.nav .button li a{display: block; width: 100%; text-align: center; font-weight: bold; line-height: 40px;color: #fff;}
+
+.menu{text-align: center; }
+.menu h3{font-weight: normal; margin-top: 40px; margin-bottom: 15px; margin-bottom: 25px;font-size: 26px; font-family:'HoonSaemaulundongR'}
+.menu h2{margin-bottom: 50px; font-family: 'NanumBarunGothicBold'; font-size: 40px;}
+.menu .quad{width: 1280px;height: 430px; margin: auto;position: relative; padding:10px;}
+
+.menu .quad .modalPage{position: absolute; top: 0; left: 0; z-index: 1000;width: 100%; height: 100%; background: rgba(0,0,0,.8); display: none;}
+.menu .quad .modalPage img{position: absolute; left: 240px; top: 60px; float: left;}
+.menu .quad .modalPage p{position: absolute; color: #fff; width: 400px;font-size: 30px; top: 124px; left: 600px; text-align: left;}
+.menu .quad .modalPage p:last-child{font-size: 16px; width: 350px; top: 259px; left: 600px;  line-height: 24px;}
+.menu .quad .modalPage span{text-align: left; position: absolute; color: #fff; width: 300px; left: 600px;  top: 186px; }
+
+.menu .quad .imgSliderWrap{width: 1280px;height: 400px; margin: 0px auto; overflow:hidden; }
+.menu .quad .imgslider{width: 0; position: relative;}
+.menu .quad dl{float: left;background: #fff; width: 300px;  height:380px; box-sizing: border-box; margin-left:8px;  margin-right: 14px;cursor: pointer; }
+.menu .quad dl:last-child{margin-right: 0;}
+.menu .quad dl dt img{width: 100%;}
+.menu .quad dl dd p{padding-bottom: 10px; font-weight:bold; font-size: 20px;}
+.menu .quad dl dd span{padding-top: 10px; font-size: 14px}
+.quad .arrow div{position: absolute; width:45px; height: 72px; top: 50%; margin-top: -36px; background: url(../img/main/best_arrow.png) no-repeat;}
+.quad .arrow div:hover{background-position-y: bottom; }
+.quad .arrow .left{left: -100px; background-position: left top;text-indent: -99999px;}
+.quad .arrow .right{right: -100px; background-position: right top;text-indent: -99999px;}
+
+.best .bottom_banner{width: 100%; height: 110px; background: #f8cdab;padding-top: 10px;margin-top: 30px;}
+.bottom_banner img{}
+
+.menu .new{background:#eee; padding-top:20px;}
+.menu .tres{width: 1280px;height: 500px; margin: auto;}
+.menu .tres a{display: block;float: left; margin: 23px; border-radius: 50%; overflow: hidden;position: relative;}
+.menu .tres a dl{width: 380px; height: 380px; }
+.menu .tres dl dt img{width: 100%; margin-top: -68px;}
+.menu .tres dl dd{width:380px; height:380px;  position: absolute; background: rgba(0,0,0,.65); left: 0; top: 300px;}
+.menu .tres dl dd p{color: #fff; font-weight: bold; margin-top: 20px;}
+.menu .tres dl dd p.discription{ font-weight: normal;  width: 200px; margin:40px auto; line-height: 1.5}
+.menu .tres dl dd p.discription span{display: block; color: #F55; font-weight: bold; font-size: 18px; margin-bottom: 10px;}
+.new .bottom_banner{width: 100%; height: 120px; background: #f2eee5;margin-top: 30px; overflow: hidden; margin-bottom:20px;}
+.new .bottom_banner img{margin-top: -10px;}
+
+/* latest*/
+.latest{width: 1280px; overflow:hidden; margin: 50px auto; }
+.latest .notice1{border: 1px solid #ddd;width: 620px; padding: 20px; box-sizing: border-box; float: left; position:relative;}
+.latest .notice1 h2{height: 45px;line-height: 45px;}
+.latest .notice1 .notice_box{}
+.latest .notice1 .notice_box colgroup col:nth-child(1){width:85%;}
+.latest .notice1 .notice_box colgroup col:nth-child(2){width:15%;}
+.latest .notice1 .notice_box tr{border-top: 1px dotted#ccc;}
+.latest .notice1 .notice_box tr .col1{line-height: 35px; float: left;}
+.latest .notice1 .notice_box tr .col1 a{display:block;}
+.latest .notice1 .notice_box tr .col2{font-size: 15px; text-align: right; line-height: 35px; float: right;}
+.latest .notice1 a.more{display:block; position: absolute; right: 24px; top: 34px;}
+
+.latest .event1{position:relative;width: 640px; padding: 20px; box-sizing: border-box; float: right; border:1px solid #ddd;}
+.latest .event1 h2{height: 45px; line-height: 45px;}
+.latest .event1 .event_box{}
+.latest .event1 .event_box colgroup col:nth-child(1){width:50%;}
+.latest .event1 .event_box colgroup col:nth-child(2){}
+.latest .event1 .event_box colgroup col:nth-child(3){width:10%;}
+.latest .event1 .event_box tr{height: 72px; margin: 5px 0;}
+.latest .event1 .event_box .col1{}
+.latest .event1 .event_box .col1 .img_wrap{display: block; width: 300px; overflow: hidden; height: 60px;}
+.latest .event1 .event_box .col1 .img_wrap img{height: 100%;margin-left:-5px;}
+.latest .event1 .event_box .col2 a{display:block;padding: 0 5px;}
+.latest .event1 .event_box .col3{font-size: 15px; text-align:right;}
+.latest .event1 a.more{display:block; position: absolute; right: 24px; top: 34px;}
