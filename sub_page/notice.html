@@ -33,9 +33,6 @@
 
 	})
 </script>
-<style>
-
-</style>
 </head>
 <?
 include "../include/dbconn.php";
@@ -194,7 +191,7 @@ $number = $total_record-$start;
 	              <option value='20'>20</option>
 	              <option value='30'>30</option>
 	            </select>
-							<img src="../img/search.png">
+							<img src="../img/search.png" alt="검색">
 						</div>
 						<div class="list_search2">
 							<select name="find">
@@ -202,8 +199,8 @@ $number = $total_record-$start;
 	              <option value='content'>내용</option>
 							</select>
 						</div>
-						<div class="list_search3"><input type="text" name="search"></div>
-						<div class="list_search4"><input type="image" src="../img/search.png"></div>
+						<div class="list_search3"><label for="search_text" class="hidden">검색할 텍스트 입력창</label><input id="search_text" type="text" name="search"></div>
+						<div class="list_search4"><input type="image" src="../img/search.png" alt="검색"></div>
 					</div>
 				</form>
 			</div>

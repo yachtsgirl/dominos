@@ -4,7 +4,6 @@
   @extract($_GET);
 	@extract($_SESSION);
 
-
 ?>
 <!doctype html>
 <html lang="ko">
@@ -53,7 +52,7 @@
 						<input id="lname" type="text" name="lname" class="nameBox" value="<?=$s_lname?>" required>
 						<p><label for="email">Email</label><span class="email_check"></span></p>
 						<input type="hidden" name="email_check_js" class="email_check_js" value="">
-		
+
 						<? include "./join_mdf.php" ?>
 						<input id="email" type="text" name="email" class="textBox" value="<?=$email?>"  required>
 						<input type="button" class="login_button" name="modify" value="Modify" onclick="javascript:document.join.submit()">
