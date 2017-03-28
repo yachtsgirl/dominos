@@ -1,0 +1,94 @@
+<? session_start();
+  @extract($_SESSION);
+?>
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta name="Subject" content="피자">
+<meta name="Title" content="도미노피자">
+<meta name="Keywords" content="피자,이탈리안,도미노,피자배달">
+<meta name="Description" content="도미노피자 온라인 샵">
+<link rel="shortcut icon" href="../img/main/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/joinus.css" />
+
+<!-- 제이쿼리 라이브러리 -->
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"  integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.4.1.min.js"></script>
+<!-- 제이쿼리 ui-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=v4iwxy6BRMjFQHQuTXjz"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script src="../js/findus.js" charset="utf-8"></script>
+<title>도미노피자 : 매장찾기</title>
+
+<style>
+</style>
+</head>
+<body>
+<div class="skip_nav">
+	<a href="#content_area">본문 바로가기</a>
+	<a href="#gnb">네비게이션 바로가기</a>
+	<a href="#order_menu">주문화면 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<? include "../include/index_head.html" ?>
+	<!-- header end-->
+	<div class="store_find">
+		<div class="list">
+			<ul>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 동서초점</h3>
+				  <p>서울특별시 서초구 서운로 220 대지스포츠플라자<br>지번주소 서울특별시 서초구 서초4동 1302-2<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 역삼점</h3>
+				  <p>서울특별시 강남구 역삼로 146 청오빌딩<br>지번주소 서울특별시 강남구 역삼동 789<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 동서초점</h3>
+				  <p>서울특별시 서초구 사임당로 13 동화빌딩<br>지번주소 서울특별시 서초구 서초3동 1580-11 동화빌딩 1층<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 동서초점</h3>
+				  <p>서울특별시 서초구 서운로 220 대지스포츠플라자<br>지번주소 서울특별시 서초구 서초4동 1302-2<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 역삼점</h3>
+				  <p>서울특별시 강남구 역삼로 146 청오빌딩<br>지번주소 서울특별시 강남구 역삼동 789<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+				<li class="iw_inner">
+				  <span></span><h3>도미노피자 동서초점</h3>
+				  <p>서울특별시 서초구 사임당로 13 동화빌딩<br>지번주소 서울특별시 서초구 서초3동 1580-11 동화빌딩 1층<br />
+				 		02-1577-3082<br />
+						<a href="http://www.dominos.co.kr" target="_blank">www.dominos.co.kr/</a>
+				 	</p>
+				</li>
+			</ul>
+		</div>
+		<div id="map"></div>
+	</div><!-- store_find -->
+  <!-- footer -->
+	<? include "../include/index_foot.html" ?>
+	<!-- footer end -->
+</div><!-- wrap -->
+</body>
+</html>
