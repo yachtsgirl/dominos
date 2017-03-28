@@ -121,7 +121,9 @@ function check_input()
 				</form>
 			</div> <!-- notice_write -->
   	</div> <!-- cs_wrapper -->
-	</div> <!-- wrap -->
-
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
 </body>
 </html>

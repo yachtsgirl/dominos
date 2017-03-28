@@ -31,12 +31,12 @@
 .notice_content form.search{float: right;}
 .notice_content .search .list_search{overflow:hidden;}
 .notice_content .search .list_search > div{float:left;}
+.notice_content .search select{height: 30px; margin-left: 7px;}
+.notice_content .search .list_search1 img,.notice_content .list_search4 input{height:25px;margin-left:5px;margin-top:2px;}
+.notice_content .search .list_search3 input#search_text{height: 30px; width:210px; box-sizing: border-box;}
+
 
 .notice_content a.write{float:right; border: 1px solid #ccc; background: #ccc; border-radius: 2px;}
-
-
-
-
 
 .notice_view .view_form{width: 100%; margin: 20px 0;}
 .notice_view .view_form .view_row1{height: 30px; line-height: 30px;margin: 20px 0; font-size: 17px;}

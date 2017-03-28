@@ -100,7 +100,7 @@
 										$img_name = $image_copied[$i];
 										$img_name = "./data/event/".$img_name;
 										$img_width = $image_width[$i];
-										echo "<img class='event' src='$img_name'>"."<br><br>";
+										echo "<img class='event' src='$img_name' alt=''>"."<br><br>";
 									}
 								}
 							?>
@@ -121,7 +121,9 @@
 				</div>
 			</div> <!-- notice_write -->
   	</div> <!-- cs_wrapper -->
-	</div> <!-- wrap -->
-
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
 </body>
 </html>

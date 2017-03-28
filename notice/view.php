@@ -1,8 +1,8 @@
 <?
 	session_start();
 	@extract($_GET);
-  @extract($_POST);
-  @extract($_SESSION);
+	@extract($_POST);
+	@extract($_SESSION);
 
 	include "../include/dbconn.php";
 
@@ -83,7 +83,9 @@
 				</div>
 			</div> <!-- notice_write -->
   	</div> <!-- cs_wrapper -->
-	</div> <!-- wrap -->
-
+		<!-- footer -->
+		<? include "../include/index_foot.html" ?>
+		<!-- footer end -->
+	</div><!-- wrap -->
 </body>
 </html>
