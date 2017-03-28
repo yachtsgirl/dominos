@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import url('common.css');
+
+.store_find{width: 1280px; margin: 40px auto; overflow: hidden;}
+.store_find .list{width: 26%; height: 600px; float:left; overflow: auto;}
+.store_find .list li{border-bottom: 1px solid #eee;}
+.store_find #map{float:right; width: 74%; height: 600px;}
+
+.iw_inner{width:250px; padding:20px;}
+.iw_inner h3{font-weight: bold; line-height: 38px; padding-left: 38px; border-bottom: 2px solid #006391; margin-bottom: 8px;}
+.iw_inner h3.js{padding-left: 0;}
+.iw_inner p{font-size:12px;clear:both;}
+.iw_inner p a{color: blue; }
+
+.iw_inner span{float:left; background: url('../img/map/sp_pins_spot_v3.png') no-repeat; width: 24px; height: 37px; display:inline-block;}
+
+.iw_inner:nth-child(1) span{background-position: 0 0;}
+.iw_inner:nth-child(2) span{background-position: -29px 0;}
+.iw_inner:nth-child(3) span{background-position: -58px 0;}
+.iw_inner:nth-child(4) span{background-position: -87px 0;}
+.iw_inner:nth-child(5) span{background-position: -116px 0;}
+.iw_inner:nth-child(6) span{background-position: -145px 0;}
+.iw_inner:nth-child(7) span{background-position: -174px 0;}
